@@ -1,9 +1,11 @@
 package com.example.realworldtutorial.util
 
+import com.example.realworldtutorial.model.Articles
 import com.example.realworldtutorial.model.LoginModel
 import com.example.realworldtutorial.model.User
 import retrofit2.Call
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface RetrofitInterface {
@@ -13,4 +15,6 @@ interface RetrofitInterface {
 
     class LoginBody(val user: LoginModel)
 
+    @GET("/api/articles")
+    fun getArticleList(): Call<Articles>
 }

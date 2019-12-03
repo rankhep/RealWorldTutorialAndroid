@@ -5,8 +5,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class NetworkHelper {
     companion object {
-        var retrofit: Retrofit? = null
-        val baseUrl = ""
+        private var retrofit: Retrofit? = null
+        private val baseUrl = ""
         val networkInstance: RetrofitInterface
             get() {
                 retrofit?.run {
